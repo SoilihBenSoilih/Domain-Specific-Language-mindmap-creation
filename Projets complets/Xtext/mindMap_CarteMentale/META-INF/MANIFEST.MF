@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: mindMap_CarteMentale
+Bundle-ManifestVersion: 2
+Bundle-Name: mindMap_CarteMentale
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: mindMap_CarteMentale; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.14.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: mindMap_CarteMentale.scoping,
+ mindMap_CarteMentale.serializer,
+ mindMap_CarteMentale.parser.antlr,
+ mindMap_CarteMentale,
+ mindMap_CarteMentale.myDsl,
+ mindMap_CarteMentale.parser.antlr.internal,
+ mindMap_CarteMentale.services,
+ mindMap_CarteMentale.myDsl.impl,
+ mindMap_CarteMentale.generator,
+ mindMap_CarteMentale.validation,
+ mindMap_CarteMentale.myDsl.util
+Import-Package: org.apache.log4j

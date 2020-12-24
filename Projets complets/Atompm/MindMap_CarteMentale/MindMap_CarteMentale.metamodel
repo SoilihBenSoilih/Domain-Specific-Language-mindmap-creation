@@ -1,0 +1,238 @@
+{
+	"types": {
+		"MindMap": [
+			{
+				"name": "title",
+				"type": "string",
+				"default": ""
+			}
+		],
+		"Topic": [
+			{
+				"name": "marker",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "name",
+				"type": "string",
+				"default": ""
+			}
+		],
+		"CentralTopic": [
+			{
+				"name": "marker",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "name",
+				"type": "string",
+				"default": ""
+			}
+		],
+		"MainTopic": [
+			{
+				"name": "marker",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "name",
+				"type": "string",
+				"default": ""
+			}
+		],
+		"SubTopic": [
+			{
+				"name": "marker",
+				"type": "string",
+				"default": ""
+			},
+			{
+				"name": "name",
+				"type": "string",
+				"default": ""
+			}
+		],
+		"topic": [],
+		"maintopics": [],
+		"subtopics": [],
+		"subsubtopics": []
+	},
+	"constraints": [
+		{
+			"name": "noAbstractInstances",
+			"event": "pre-create",
+			"code": "false",
+			"targetType": "Topic"
+		}
+	],
+	"actions": [],
+	"cardinalities": {
+		"MindMap": [
+			{
+				"dir": "out",
+				"type": "topic",
+				"min": "1",
+				"max": "1"
+			}
+		],
+		"Topic": [],
+		"CentralTopic": [
+			{
+				"dir": "in",
+				"type": "topic",
+				"min": "1",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "maintopics",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"MainTopic": [
+			{
+				"dir": "in",
+				"type": "maintopics",
+				"min": "1",
+				"max": "1"
+			},
+			{
+				"dir": "",
+				"type": "",
+				"min": "",
+				"max": ""
+			},
+			{
+				"dir": "out",
+				"type": "subtopics",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"SubTopic": [
+			{
+				"dir": "in",
+				"type": "subtopics",
+				"min": "1",
+				"max": "1"
+			},
+			{
+				"dir": "in",
+				"type": "subsubtopics",
+				"min": "1",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "subsubtopics",
+				"min": "0",
+				"max": "Infinity"
+			}
+		],
+		"topic": [
+			{
+				"dir": "in",
+				"type": "MindMap",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "CentralTopic",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"maintopics": [
+			{
+				"dir": "in",
+				"type": "CentralTopic",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "MainTopic",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"subtopics": [
+			{
+				"dir": "in",
+				"type": "MainTopic",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "SubTopic",
+				"min": "0",
+				"max": "1"
+			}
+		],
+		"subsubtopics": [
+			{
+				"dir": "in",
+				"type": "SubTopic",
+				"min": "0",
+				"max": "1"
+			},
+			{
+				"dir": "out",
+				"type": "SubTopic",
+				"min": "0",
+				"max": "1"
+			}
+		]
+	},
+	"legalConnections": {
+		"MindMap": {
+			"CentralTopic": [
+				"topic"
+			]
+		},
+		"CentralTopic": {
+			"MainTopic": [
+				"maintopics"
+			]
+		},
+		"MainTopic": {
+			"SubTopic": [
+				"subtopics"
+			]
+		},
+		"SubTopic": {
+			"SubTopic": [
+				"subsubtopics"
+			]
+		}
+	},
+	"connectorTypes": {
+		"topic": "visual",
+		"maintopics": "visual",
+		"subtopics": "visual",
+		"subsubtopics": "visual"
+	},
+	"types2parentTypes": {
+		"MindMap": [],
+		"Topic": [],
+		"CentralTopic": [
+			"Topic"
+		],
+		"MainTopic": [
+			"Topic"
+		],
+		"SubTopic": [
+			"Topic"
+		],
+		"topic": [],
+		"maintopics": [],
+		"subtopics": [],
+		"subsubtopics": []
+	}
+}

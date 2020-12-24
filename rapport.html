@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>IFT6253 Devoir1 MindMap Soilihi</title>
+    <style type="text/css">
+        table
+        {
+            border: outset 2px black;
+            border-collapse: collapse;
+        }
+        th
+        {
+            border-bottom: double 2px black;
+        }
+        td
+        {
+            border-bottom: solid 1px black;
+        }
+        .first_col
+        {
+            border-right: double 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">
+        IFT 6253 - Devoir 1</h1>
+    <h2>
+        Informations générales</h2>
+    <p>
+        <span style="font-weight: bold;">Nom: </span>Soilihi BEN SOILIHI BOINA
+        <br />
+        <span style="font-weight: bold;">Matricule: </span>5447
+        <br />
+        <span style="font-weight: bold;">Courriel: </span>ben.soilihi.boina.soilihi@umontreal.ca
+        <br />
+        <span style="font-weight: bold;">temps mis: </span>40 heures
+    </p>
+    <h2>Tâche 1 : Faire une DSL textuelle génératrice de mindmap avec Xtext ou gmf</h2>
+    <p>
+       Ma solution est la définition d'une grammaire xtext complète qui définit toutes les propriétés et fonctionnalités de notre DSL. <br>
+       Le coeur du travail est là, et se décompose comme suit: <br><br>
+       <span style="font-weight: bold;"> - création du projet Xtext sur Eclipse Epsilon : <span style="font-style: italic; color: blue"> File > New > Other > Xtext > Xtext project</span></span><br>
+       il ne faut pas oublier de préciser l'extension de notre DSL. <br>
+       Pour notre cas, l'extension c'est <span style="font-style: italic; font-weight: bold; color: red">.mmcm</span> qui signifie <span style="font-style: italic; font-weight: bold; color: red">MindMapCarteMentale.</span> <br><br>
+       <span style="font-weight: bold;"> - 4 projets se créent et on ouvre le premier puis on cherche le fichier <span style="font-style: italic; color: blue"> .Xtext</span> dans le dossier source(src) et on y définit la grammaire de notre DSL dedans.</span><br><br>
+
+       <span style="font-weight: bold;"> - on fait un clique sur : <span style="font-style: italic; color: blue"> Xtext > « Run As > Generate Xtext Artifacts » </span> </span><br><br>
+
+       <span style="font-weight: bold;"> - suite à quoi on choisit le dossier : <span style="font-style: italic; color: blue"> « *.ui » <span style="color: #000">et puis on fait</span> « Run As > Launch Runtime Eclipse ». </span> </span><br><br>
+       
+       <span style="font-weight: bold;"> - Dans la nouvelle instance lancée, il suffit de créer un nouveau projet vide : <span style="font-style: italic; color: blue"> « File > New > Project » <span style="color: #000">dans lequel on crée un fichier</span> « .mmcm » </span> </span> et Xtext nous propose de configurer le projet en tant que projet Xtext et si on valide, on peut ainsi créer une instance avec l'autocomplétion, la coloration...etc<br><br>
+
+        <br/>Cette expérimentation sur base sur <a href="sources/creation-grammaire-xtext%20(1).pdf" target="_blank"> cet article.</a><br><br>
+       L'exemple du mindmap textuel généré est le suivant sous deux vues:
+    </p>
+    <img src="images/XText_MindMap_Instance.PNG"
+        width="500px" alt="some image" /><br><br>
+    <img src="images/XText_MindMap_Instance1.PNG"
+        width="500px" alt="some image" /><br>
+    <img src="images/XText_MindMap_Instance2.PNG"
+        width="500px" alt="some image" />
+    <h2>Tâche 2 : Faire une DSL graphique génératrice de mindmap avec atompm</h2>
+    <p>
+       Ici, il y'a 2 étapes pour ça: <br/><br>
+        
+        <span style="font-weight: bold;">
+        -Générer la syntaxe abstraite qui est représentée dans Atompm avec des  <span style="font-style: italic; color: blue"> diagrammes de classes</span></span><br><br>
+        
+        <span style="font-weight: bold;">
+        -Générer la syntaxe concrète en associant des élémennts visuels qui sont nativement dans l'outil (ou importés comme des photos par exemple) à nos classes et nos relations et utiliser des <span style="font-style: italic; color: blue"> mappers</span> pour pouvoir modifier les propriétés présentes dans le diagramme de classe constituant la syntaxe abstraite.</span><br><br>
+        
+        <span style="font-weight: bold;">On pourra utiliser cette DSL par la suite pour créer des instances.</span><br><br>
+        
+       Tout ce travail se base sur la <a href="https://atompm.readthedocs.io/en/latest/" target="_blank">documentation d'atompm.</a><br/><br/>
+       L'exemple du mindmap visuel que j'ai généré est le suivant:<br/>
+    </p>
+    <img src="images/XText_MindMap_Instance3.PNG"
+        width="500px" alt="some image" /><br/><br/>
+    <h2>Tâche 2 : Décrire nos expériences par rapport à l'utilisation des deux outils.</h2>
+    <p>
+       Mon avis à moi quant à l'utilisation des outils est décrite dans
+        <a href="Atompm%20ou%20Xtext.pdf" target="_blank"> ce document pdf.</a><br/>
+    
+</body>
+</html>
